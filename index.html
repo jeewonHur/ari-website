@@ -226,22 +226,9 @@
     #contact .section-tag { border-color: rgba(139,168,136,.3); color: var(--green); }
     #contact .section-title { color: #fff; }
     #contact .section-sub { color: rgba(255,255,255,.55); }
-    .apply-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 4rem; align-items: start; margin-top: 3rem; }
-    .apply-info h3 { font-family: 'Noto Serif KR', serif; font-size: 1.2rem; font-weight: 600; color: #fff; margin-bottom: 1.2rem; }
-    .apply-list { list-style: none; }
-    .apply-list li { display: flex; gap: .8rem; padding: .7rem 0; border-bottom: 1px solid rgba(255,255,255,.08); font-size: .9rem; color: rgba(255,255,255,.65); }
-    .apply-list li:last-child { border-bottom: none; }
-    .apply-list li strong { color: #fff; min-width: 80px; flex-shrink: 0; }
-    .apply-form { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); border-radius: 20px; padding: 2.2rem; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .form-group { display: flex; flex-direction: column; gap: .5rem; margin-bottom: 1rem; }
-    .form-group label { font-size: .82rem; font-weight: 600; color: rgba(255,255,255,.65); letter-spacing: .04em; }
-    .form-group input, .form-group select, .form-group textarea { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); border-radius: 10px; padding: .75rem 1rem; font-family: inherit; font-size: .9rem; color: #fff; outline: none; transition: border .2s; }
-    .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,.3); }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--green); }
-    .form-group select option { background: var(--dark); color: #fff; }
-    .form-group textarea { resize: vertical; min-height: 90px; }
-    .form-submit { width: 100%; padding: 1rem; background: var(--grad); color: #fff; border: none; border-radius: 50px; font-family: inherit; font-size: 1rem; font-weight: 700; cursor: pointer; transition: opacity .2s, transform .2s; box-shadow: 0 6px 24px rgba(139,168,136,.3); margin-top: .5rem; }
+    .apply-cta { text-align: center; margin-top: 3rem; }
+    .apply-cta-notice { font-size: .95rem; color: rgba(255,255,255,.55); letter-spacing: .02em; }
+    .form-submit { display: inline-block; padding: 1rem 3rem; background: var(--grad); color: #fff; border: none; border-radius: 50px; font-family: inherit; font-size: 1rem; font-weight: 700; cursor: pointer; transition: opacity .2s, transform .2s; box-shadow: 0 6px 24px rgba(139,168,136,.3); }
     .form-submit:hover { opacity: .88; transform: translateY(-2px); }
 
     /* ══ FOOTER ══ */
@@ -733,51 +720,12 @@
   <div class="reveal">
     <span class="section-tag">Apply</span>
     <h2 class="section-title">수강 신청</h2>
-    <p class="section-sub">2026년 9월 코스 수강 신청을 받고 있습니다. 궁금한 점은 문의란에 남겨주세요.</p>
+    <p class="section-sub">2026년 9월 코스 수강 신청을 받고 있습니다.</p>
   </div>
 
-  <div class="apply-grid reveal">
-    <div class="apply-info">
-      <h3>과정 안내</h3>
-      <ul class="apply-list">
-        <li><strong>시작일</strong>2026년 9월 5일 (토)</li>
-        <li><strong>기간</strong>총 4개월 (모듈 1 기본과정)</li>
-        <li><strong>수업</strong>토·일 오후 2–7시, 격주 진행</li>
-        <li><strong>장소</strong>추후 안내</li>
-        <li><strong>정원</strong>소수 정예 운영</li>
-      </ul>
-    </div>
-    <div class="apply-form">
-      <form id="applyForm">
-        <div class="form-row">
-          <div class="form-group">
-            <label>이름 *</label>
-            <input type="text" placeholder="홍길동" required>
-          </div>
-          <div class="form-group">
-            <label>연락처 *</label>
-            <input type="tel" placeholder="010-0000-0000" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label>이메일</label>
-          <input type="email" placeholder="email@example.com">
-        </div>
-        <div class="form-group">
-          <label>관심 과정</label>
-          <select>
-            <option>모듈 1 기본과정 (2026년 9월)</option>
-            <option>신경과학 연계 심화 과정</option>
-            <option>온라인 자기 탐구 과정</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>문의 사항</label>
-          <textarea placeholder="궁금한 점을 자유롭게 적어주세요."></textarea>
-        </div>
-        <button type="submit" class="form-submit">신청서 보내기</button>
-      </form>
-    </div>
+  <div class="apply-cta reveal">
+    <p class="apply-cta-notice">수강 신청은 사전 상담을 통해 진행됩니다.</p>
+    <a href="apply.html" class="form-submit" style="display:inline-block;text-align:center;text-decoration:none;padding:1.1rem 3.5rem;margin-top:1.5rem;">수강 신청하기</a>
   </div>
 
 </section>
@@ -820,15 +768,7 @@
   ham.addEventListener('click', () => { ham.classList.toggle('open'); drawer.classList.toggle('open'); });
   drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { ham.classList.remove('open'); drawer.classList.remove('open'); }));
 
-  /* Form */
-  document.getElementById('applyForm').addEventListener('submit', e => {
-    e.preventDefault();
-    const btn = e.target.querySelector('.form-submit');
-    btn.textContent = '신청이 접수되었습니다 ✓';
-    btn.style.background = 'var(--green-d)';
-    btn.disabled = true;
-    e.target.reset();
-  });
+  /* Form - moved to apply.html */
 
   /* Scroll reveal */
   const revealObserver = new IntersectionObserver(entries => {
