@@ -236,7 +236,7 @@
         <label>소매틱 경험 유무</label>
         <div class="radio-group">
           <label class="radio-label">
-            <input type="radio" name="somatic" value="있음">
+            <input type="radio" name="somatic" value="있음" id="somatic-yes">
             <div class="radio-dot"></div>
             경험 있음
           </label>
@@ -253,6 +253,11 @@
         </div>
       </div>
 
+      <div class="form-group" id="somatic-detail" style="display:none; margin-top:-.4rem;">
+        <label>어떤 경험을 하셨나요?</label>
+        <textarea placeholder="경험하신 소매틱 실천이나 수련을 자유롭게 적어주세요. (예: 요가, 명상, 펠든크라이스, 바디워크 등)" style="min-height:100px;"></textarea>
+      </div>
+
       <button type="submit" class="form-submit">신청서 보내기</button>
     </form>
 
@@ -265,6 +270,15 @@
 </main>
 
 <script>
+  /* 소매틱 경험 있음 선택 시 서술형 칸 표시 */
+  document.querySelectorAll('input[name="somatic"]').forEach(radio => {
+    radio.addEventListener('change', () => {
+      const detail = document.getElementById('somatic-detail');
+      detail.style.display = radio.value === '있음' ? 'flex' : 'none';
+    });
+  });
+
+  /* 제출 */
   document.getElementById('applyForm').addEventListener('submit', e => {
     e.preventDefault();
     document.getElementById('applyForm').style.display = 'none';
