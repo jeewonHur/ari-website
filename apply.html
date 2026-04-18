@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARI 아리 | 수강 신청</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green:    #8BA888;
+      --gold:     #C8BE5A;
+      --green-d:  #3D4C6F;
+      --gold-d:   #A8A040;
+      --grad:     linear-gradient(135deg, #3D4C6F 0%, #8BA888 35%, #C8BE5A 75%, #D4CA6A 100%);
+      --grad-r:   linear-gradient(135deg, #D4CA6A 0%, #C8BE5A 25%, #8BA888 65%, #3D4C6F 100%);
+      --dark:     #2A3245;
+      --mid:      #8A8A88;
+      --light:    #B8B5B0;
+      --bg:       #F4F3F0;
+      --white:    #FFFFFF;
+      --border:   #DDDBD6;
+      --nav-h:    68px;
+      --px:       clamp(1.25rem, 6vw, 7rem);
+    }
+
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: 'Noto Sans KR', sans-serif; color: var(--dark); background: var(--dark); line-height: 1.8; min-height: 100vh; }
+
+    .grad-text { background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+    /* ══ NAV ══ */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 300;
+      height: var(--nav-h);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 var(--px);
+      background: rgba(42,50,69,.95);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(139,168,136,.15);
+    }
+    .nav-logo { display: flex; align-items: center; gap: .7rem; text-decoration: none; }
+    .nav-logo img { height: 44px; width: auto; border-radius: 10px; object-fit: contain; }
+    .nav-logo-text { display: flex; flex-direction: column; line-height: 1.2; }
+    .nav-logo-text .ari-name { font-family: 'Noto Serif KR', serif; font-size: 1.1rem; font-weight: 600; color: #fff; }
+    .nav-logo-text .ari-sub { font-size: .62rem; color: var(--light); letter-spacing: .04em; font-weight: 400; }
+    .back-btn {
+      display: flex; align-items: center; gap: .5rem;
+      font-size: .85rem; color: rgba(255,255,255,.55);
+      text-decoration: none; transition: color .2s;
+    }
+    .back-btn:hover { color: var(--green); }
+    .back-btn svg { width: 16px; height: 16px; }
+
+    /* ══ MAIN ══ */
+    main {
+      padding-top: calc(var(--nav-h) + 4rem);
+      padding-bottom: 6rem;
+      padding-left: var(--px);
+      padding-right: var(--px);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* ══ HEADER ══ */
+    .page-tag {
+      display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .14em;
+      border: 1px solid rgba(139,168,136,.4); color: var(--green);
+      padding: .3rem .9rem; border-radius: 50px; margin-bottom: 1.2rem;
+      text-transform: uppercase;
+    }
+    .page-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.35;
+      margin-bottom: 1rem;
+    }
+    .page-notice {
+      display: flex; align-items: center; gap: .75rem;
+      background: rgba(139,168,136,.12);
+      border: 1px solid rgba(139,168,136,.25);
+      border-radius: 12px;
+      padding: 1rem 1.3rem;
+      margin-bottom: 2.5rem;
+      font-size: .88rem;
+      color: rgba(255,255,255,.7);
+    }
+    .page-notice-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--green); flex-shrink: 0;
+    }
+
+    /* ══ FORM ══ */
+    .apply-form {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 24px;
+      padding: 2.5rem;
+    }
+
+    .form-group { display: flex; flex-direction: column; gap: .5rem; margin-bottom: 1.4rem; }
+    .form-group:last-of-type { margin-bottom: 0; }
+    .form-group label {
+      font-size: .82rem; font-weight: 600;
+      color: rgba(255,255,255,.6); letter-spacing: .04em;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.13);
+      border-radius: 12px;
+      padding: .85rem 1.1rem;
+      font-family: inherit; font-size: .95rem;
+      color: #fff; outline: none;
+      transition: border .2s, background .2s;
+      -webkit-appearance: none;
+    }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,.25); }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: var(--green);
+      background: rgba(139,168,136,.1);
+    }
+    .form-group select { cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,0.4)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1.1rem center; padding-right: 2.5rem; }
+    .form-group select option { background: var(--dark); color: #fff; }
+
+    /* Radio group for 소매틱 경험 */
+    .radio-group { display: flex; gap: 1rem; margin-top: .2rem; }
+    .radio-label {
+      display: flex; align-items: center; gap: .55rem;
+      cursor: pointer; font-size: .92rem; color: rgba(255,255,255,.7);
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.13);
+      border-radius: 12px; padding: .75rem 1.3rem;
+      flex: 1; justify-content: center;
+      transition: all .2s;
+    }
+    .radio-label:hover { border-color: var(--green); background: rgba(139,168,136,.1); }
+    .radio-label input[type="radio"] { display: none; }
+    .radio-label.selected, .radio-label:has(input:checked) {
+      border-color: var(--green);
+      background: rgba(139,168,136,.18);
+      color: #fff;
+    }
+    .radio-dot {
+      width: 16px; height: 16px; border-radius: 50%;
+      border: 2px solid rgba(255,255,255,.3);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; transition: all .2s;
+    }
+    .radio-label:has(input:checked) .radio-dot {
+      border-color: var(--green);
+      background: var(--green);
+    }
+    .radio-label:has(input:checked) .radio-dot::after {
+      content: ''; width: 6px; height: 6px; border-radius: 50%; background: #fff;
+    }
+
+    .form-submit {
+      width: 100%; padding: 1.1rem;
+      background: var(--grad); color: #fff;
+      border: none; border-radius: 50px;
+      font-family: inherit; font-size: 1rem; font-weight: 700;
+      cursor: pointer; transition: opacity .2s, transform .2s;
+      box-shadow: 0 6px 24px rgba(139,168,136,.25);
+      margin-top: 2rem;
+      letter-spacing: .03em;
+    }
+    .form-submit:hover { opacity: .88; transform: translateY(-2px); }
+    .form-submit:disabled { opacity: .6; transform: none; cursor: default; }
+
+    /* ══ SUCCESS ══ */
+    .success-msg {
+      display: none; text-align: center; padding: 2rem 0;
+    }
+    .success-msg .check { font-size: 3rem; margin-bottom: 1rem; }
+    .success-msg h3 { font-family: 'Noto Serif KR', serif; font-size: 1.3rem; color: #fff; margin-bottom: .5rem; }
+    .success-msg p { font-size: .9rem; color: rgba(255,255,255,.55); }
+
+    /* ══ RESPONSIVE ══ */
+    @media (max-width: 480px) {
+      .apply-form { padding: 1.8rem 1.4rem; }
+      .radio-group { flex-direction: column; gap: .7rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="ari-logo.png" alt="ARI 아리">
+    <div class="nav-logo-text">
+      <span class="ari-name">ARI 아리</span>
+      <span class="ari-sub">자기돌봄 움직임 전문가 과정</span>
+    </div>
+  </a>
+  <a href="index.html" class="back-btn">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 12H5M12 5l-7 7 7 7"/>
+    </svg>
+    홈으로 돌아가기
+  </a>
+</nav>
+
+<!-- MAIN -->
+<main>
+  <span class="page-tag">Apply</span>
+  <h1 class="page-title">수강 신청</h1>
+
+  <div class="page-notice">
+    <div class="page-notice-dot"></div>
+    <span>수강 신청은 사전 상담을 통해 진행됩니다.</span>
+  </div>
+
+  <div class="apply-form">
+    <form id="applyForm">
+
+      <div class="form-group">
+        <label>이름 *</label>
+        <input type="text" placeholder="홍길동" required>
+      </div>
+
+      <div class="form-group">
+        <label>연락처 *</label>
+        <input type="tel" placeholder="010-0000-0000" required>
+      </div>
+
+      <div class="form-group">
+        <label>이메일</label>
+        <input type="email" placeholder="email@example.com">
+      </div>
+
+      <div class="form-group">
+        <label>소매틱 경험 유무</label>
+        <div class="radio-group">
+          <label class="radio-label">
+            <input type="radio" name="somatic" value="있음">
+            <div class="radio-dot"></div>
+            경험 있음
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="somatic" value="없음">
+            <div class="radio-dot"></div>
+            경험 없음
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="somatic" value="잘 모름">
+            <div class="radio-dot"></div>
+            잘 모름
+          </label>
+        </div>
+      </div>
+
+      <button type="submit" class="form-submit">신청서 보내기</button>
+    </form>
+
+    <div class="success-msg" id="successMsg">
+      <div class="check">✓</div>
+      <h3>신청서가 접수되었습니다</h3>
+      <p>담당자가 확인 후 상담 일정을 안내드릴게요.<br>감사합니다 🌿</p>
+    </div>
+  </div>
+</main>
+
+<script>
+  document.getElementById('applyForm').addEventListener('submit', e => {
+    e.preventDefault();
+    document.getElementById('applyForm').style.display = 'none';
+    document.getElementById('successMsg').style.display = 'block';
+  });
+</script>
+
+</body>
+</html>
