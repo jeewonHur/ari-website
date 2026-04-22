@@ -110,7 +110,8 @@
     .hero-text h1 strong { display: block; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .hero-text p { color: var(--mid); font-size: clamp(.9rem,1.4vw,1.02rem); max-width: 440px; margin-bottom: 2rem; word-break: keep-all; }
     .hero-tags { display: flex; flex-wrap: wrap; gap: .55rem; margin-bottom: 2.2rem; }
-    .hero-tag-pill { padding: .32rem .9rem; background: rgba(200,190,90,.12); border: 1px solid rgba(200,190,90,.3); border-radius: 50px; font-size: .78rem; font-weight: 500; color: var(--gold-d); letter-spacing: .03em; }
+    .hero-tag-pill { padding: .45rem 1.1rem; background: rgba(200,190,90,.12); border: 1px solid rgba(200,190,90,.3); border-radius: 16px; font-size: .78rem; font-weight: 600; color: var(--gold-d); letter-spacing: .03em; line-height: 1.5; text-align: center; display: inline-flex; flex-direction: column; align-items: center; }
+    .pill-kr { font-size: .7rem; font-weight: 400; color: var(--mid); letter-spacing: .01em; }
     .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
 
     /* ══ BUTTONS ══ */
@@ -176,6 +177,7 @@
     .prog-box ul li { font-size: .92rem; color: var(--mid); padding: .4rem 0; border-bottom: 1px solid var(--border); display: flex; gap: .6rem; }
     .prog-box ul li:last-child { border-bottom: none; }
     .prog-box ul li::before { content: '✦'; color: var(--green); font-size: .7rem; margin-top: .35rem; flex-shrink: 0; }
+    .checklist-no-bullet li::before { content: none !important; }
     .prog-section-title { font-family: 'Noto Serif KR', serif; font-size: 1.4rem; font-weight: 600; color: var(--dark); margin-bottom: 1.5rem; }
     .practice-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.2rem; margin-bottom: 3.5rem; }
     .practice-card { background: var(--bg); border: 1px solid var(--border); border-radius: 14px; padding: 1.4rem; transition: box-shadow .2s, transform .2s; }
@@ -316,6 +318,7 @@
   </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
+    <li><a href="#approach">Approach</a></li>
     <li><a href="#programs">Program</a></li>
     <li><a href="#curriculum">Curriculum</a></li>
     <li><a href="#contact">Apply</a></li>
@@ -329,6 +332,7 @@
 <!-- Mobile Drawer -->
 <div class="mobile-drawer" id="mobileDrawer">
   <a href="#about"      class="drawer-link">About</a>
+  <a href="#approach"   class="drawer-link">Approach</a>
   <a href="#programs"   class="drawer-link">Program</a>
   <a href="#curriculum" class="drawer-link">Curriculum</a>
   <a href="#contact"    class="drawer-link">Apply</a>
@@ -352,13 +356,12 @@
   <div class="hero-inner">
     <div class="hero-text">
       <span class="hero-eyebrow">✦ 감각인지기반 움직임 전문가 과정</span>
-      <h1><strong>자기돌봄 움직임<br>서로돌봄 움직임</strong></h1>
-      <p>움직임을 통해 감각, 감정, 생각을 통합하고<br>스스로 돌보는 삶의 자율성을 되찾습니다.</p>
+      <h1><strong>움직임으로 나를 돌보는 삶</strong></h1>
+      <p>감각•감정•생각•움직임을 알아차리고 조절하는 자기돌봄 움직임 학습과정입니다.<br>몸을 통해 나를 이해하고 스스로 회복하는 능력을 기릅니다.</p>
       <div class="hero-tags">
-        <span class="hero-tag-pill">자기돌봄</span>
-        <span class="hero-tag-pill">자기치유</span>
-        <span class="hero-tag-pill">자기배움</span>
-        <span class="hero-tag-pill">자기발견</span>
+        <span class="hero-tag-pill">Self-Listening<br><span class="pill-kr">나에게 귀 기울이기</span></span>
+        <span class="hero-tag-pill">Self-Balancing<br><span class="pill-kr">나를 조율하기</span></span>
+        <span class="hero-tag-pill">Self-Discovery<br><span class="pill-kr">나를 발견하고 이해하기</span></span>
       </div>
       <div class="hero-btns">
         <a href="#programs" class="btn-grad">과정 살펴보기</a>
@@ -385,27 +388,10 @@
 
   <div class="about-top reveal">
     <span class="section-tag">About ARI</span>
-    <h2 class="section-title">아리(ARI)란<br>무엇인가</h2>
+    <img src="ari-wordmark-white.png" alt="ARI 아리" style="height:110px;width:auto;margin-bottom:1rem;">
     <p class="section-sub">아리는 우리말 어근에서 온 이름입니다. <strong>ㅇ(알다)</strong>, <strong>ㄹ(흐르다)</strong>, <strong>알(씨앗)</strong>의 뜻을 담아, 몸을 통해 나를 알고 흐르는 삶을 가꾸는 여정을 의미합니다.</p>
   </div>
 
-  <div class="about-etymology reveal">
-    <div class="etym-card">
-      <div class="etym-char">ㅇ</div>
-      <div class="etym-title">알다 · 인지하다</div>
-      <div class="etym-desc">내 몸의 감각과 신호를 알아채고 인식하는 것. 모든 자기돌봄의 시작.</div>
-    </div>
-    <div class="etym-card">
-      <div class="etym-char">ㄹ</div>
-      <div class="etym-title">흐르다 · 연결되다</div>
-      <div class="etym-desc">막힘 없이 흐르는 움직임처럼, 몸·감정·생각이 자연스럽게 이어지는 상태.</div>
-    </div>
-    <div class="etym-card">
-      <div class="etym-char">알</div>
-      <div class="etym-title">씨앗 · 가능성</div>
-      <div class="etym-desc">내 안에 이미 존재하는 치유와 배움의 씨앗. 움직임으로 그것을 깨워냅니다.</div>
-    </div>
-  </div>
 
   <div class="ari-cards reveal">
     <div class="ari-card">
@@ -425,24 +411,242 @@
     </div>
   </div>
 
-  <div class="slogan-strip reveal">
-    <div class="slogan-item">
-      <div class="slogan-en">Move Different</div>
-      <div class="slogan-kr">다르게 움직이다</div>
+  <div class="reveal" style="margin-top:3rem;padding:2rem 2.5rem;background:rgba(0,0,0,.2);border-radius:20px;border-left:3px solid var(--green);">
+    <p style="font-size:.97rem;color:rgba(255,255,255,.75);line-height:2;">이 과정에서 학습자는 자신의 감각과 움직임을 세밀하게 인식하고, 필요에 따라 조절하며, 점차 더 효율적이고 통합적인 움직임을 경험하게 됩니다. 이러한 과정은 몸을 통해 자신을 이해하는 새로운 학습 방식으로 이어집니다.</p>
+  </div>
+
+
+</section>
+
+<!-- ══ APPROACH ══ -->
+<section id="approach" style="background:var(--bg); padding:var(--py) var(--px);">
+
+  <div class="reveal">
+    <span class="section-tag">Approach</span>
+    <h2 class="section-title">움직임이 학습이 되는 과정</h2>
+  </div>
+
+  <div class="reveal" style="margin-top:2.5rem; max-width:760px;">
+
+    <div style="background:#fff; border:1px solid var(--border); border-radius:20px; padding:2rem 2.4rem; margin-bottom:2rem;">
+      <p style="font-family:'Noto Serif KR',serif; font-size:1.15rem; font-weight:600; color:var(--dark); line-height:1.75; margin-bottom:.6rem;">"Movement is the basis of awareness."</p>
+      <p style="font-size:.82rem; color:var(--mid); letter-spacing:.06em; margin-bottom:1rem;">— Moshe Feldenkrais</p>
+      <p style="font-size:.95rem; color:var(--mid); line-height:1.9;">"움직임은 알아차림의 기초이다."</p>
     </div>
-    <div class="slogan-divider"></div>
-    <div class="slogan-item">
-      <div class="slogan-en">나를 이롭게, 세상을 이롭게</div>
-      <div class="slogan-kr">움직임을 통한 자기돌봄 · 자기치유 · 자기배움 · 자기발견</div>
+
+    <div style="display:flex; flex-direction:column; gap:1.2rem;">
+      <p style="font-size:.95rem; color:var(--mid); line-height:2;">
+        펠든크라이스는 움직임을 단순한 신체 활동이 아니라, 자신을 인식하고 변화시키는 가장 근본적인 방식으로 보았습니다. 즉, 움직임을 바꾸는 것은 곧 자신을 바꾸는 과정입니다.
+      </p>
+      <p style="font-size:.95rem; color:var(--mid); line-height:2;">
+        또한 소매틱 움직임 교육에서는 개인의 경험을 존중하면서도 반복 가능하고 구조화된 학습이 중요하게 다뤄집니다.
+      </p>
+      <p style="font-size:.95rem; color:var(--mid); line-height:2;">
+        ARI는 이러한 관점을 바탕으로, 누구나 스스로 탐구하고 확장할 수 있는 움직임 학습 구조를 설계했습니다. 감각·인지·움직임을 하나의 흐름으로 연결하고, 신경가소성을 기반으로 움직임 자체가 곧 학습이 되는 과정을 구현합니다.
+      </p>
+      <p style="font-size:.95rem; color:var(--mid); line-height:2;">
+        더 나아가 ARI는 예술적 관점에서 인간의 고유한 표현 욕구를 중요하게 다룹니다. 움직임은 기능을 넘어, 몸과 마음, 그리고 '얼'이 통합되는 경험이며 각자의 고유한 방식으로 자신을 드러내는 과정입니다.
+      </p>
+      <div style="margin-top:.5rem; padding:1.4rem 1.8rem; background:rgba(139,168,136,.1); border-left:3px solid var(--green); border-radius:0 12px 12px 0;">
+        <p style="font-size:.97rem; color:var(--dark); font-weight:600; line-height:1.8;">👉 움직임은 삶의 기반이 되고, 학습이 되며, 표현이 됩니다</p>
+      </div>
     </div>
-    <div class="slogan-divider"></div>
-    <div class="slogan-item">
-      <div class="slogan-en">100세 시대, 내 몸은 내가 돌본다</div>
-      <div class="slogan-kr">나는 내 몸의 전문가다</div>
+
+  </div>
+
+</section>
+
+<!-- ══ PROGRAM ══ -->
+<section id="programs" style="background:#fff;">
+
+  <div class="prog-intro reveal">
+    <span class="section-tag">Program</span>
+    <h2 class="section-title">전문가 과정 소개</h2>
+  </div>
+
+  <div class="reveal" style="margin-bottom: 3rem;">
+    <div class="prog-box" style="max-width:100%;">
+      <h3 style="font-family:'Noto Serif KR',serif;font-size:1.15rem;font-weight:600;color:var(--dark);margin-bottom:1.2rem;">움직임이 학습이 되는 과정</h3>
+      <p style="font-size:.95rem;color:var(--mid);line-height:1.9;margin-bottom:1rem;">
+        ARI는 펠든크라이스 메소드와 Jeremy Krauss Approach를 기반으로, 예술적 경험과 움직임 교육을 바탕으로 설계된 감각인지 기반 움직임 교육입니다.
+      </p>
+      <p style="font-size:.95rem;color:var(--mid);line-height:1.9;margin-bottom:1rem;">
+        감각 · 인지 · 움직임을 분리하지 않고 하나의 학습 구조로 통합하며 신경가소성을 바탕으로 움직임 자체가 곧 학습이 되는 과정을 만듭니다.
+      </p>
+      <p style="font-size:.95rem;color:var(--mid);line-height:1.9;margin-bottom:1rem;">
+        주의(attention), 리스닝(listening), 관찰(observation), 비판단(non-judgement), 억제(inhibition), 분화(differentiation), 방향성(direction) 등 소매틱스의 핵심 원리는 경험 속에서 자연스럽게 체화되며, 이는 자기 이해와 회복의 과정으로 확장됩니다.
+      </p>
+      <p style="font-size:.95rem;color:var(--mid);line-height:1.9;">
+        이 모든 과정은 개념이 아닌 움직임으로 구현되며, ARI practice와 ARI flow라는 구조로 구체화됩니다.
+      </p>
     </div>
   </div>
 
-  <!-- ARI를 만든 사람 -->
+  <div class="reveal" style="margin-bottom:2rem;">
+    <p class="prog-section-title">ARI Practice → ARI Flow</p>
+  </div>
+
+  <div class="reveal" style="margin-bottom:2.5rem;">
+    <div class="prog-box" style="max-width:100%;">
+      <h3 style="font-family:'Noto Serif KR',serif;font-size:1.1rem;font-weight:600;color:var(--dark);margin-bottom:.8rem;">ARI Practice</h3>
+      <p style="font-size:.93rem;color:var(--mid);line-height:1.9;margin-bottom:1.4rem;">교사의 안내에 따라 움직이며, 감각과 주의를 조절하는 경험을 통해 자기 사용 방식을 탐구하는 과정입니다.</p>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:.55rem;margin-bottom:1.6rem;">
+        <li style="font-size:.9rem;color:var(--dark);display:flex;gap:.6rem;"><span style="color:var(--green);font-weight:700;">✓</span> 다양한 자기-사용 방식 탐구 (Different way)</li>
+        <li style="font-size:.9rem;color:var(--dark);display:flex;gap:.6rem;"><span style="color:var(--green);font-weight:700;">✓</span> 주의 조절 및 전환 능력 확장</li>
+        <li style="font-size:.9rem;color:var(--dark);display:flex;gap:.6rem;"><span style="color:var(--green);font-weight:700;">✓</span> 차이를 인지하는 감각의 섬세함</li>
+        <li style="font-size:.9rem;color:var(--dark);display:flex;gap:.6rem;"><span style="color:var(--green);font-weight:700;">✓</span> 구조와 기능의 연결 이해</li>
+        <li style="font-size:.9rem;color:var(--dark);display:flex;gap:.6rem;"><span style="color:var(--green);font-weight:700;">✓</span> 민감성 및 신체 인식 향상</li>
+        <li style="font-size:.9rem;color:var(--dark);display:flex;gap:.6rem;"><span style="color:var(--green);font-weight:700;">✓</span> 자세별 중력과의 관계 탐구</li>
+        <li style="font-size:.9rem;color:var(--dark);display:flex;gap:.6rem;"><span style="color:var(--green);font-weight:700;">✓</span> 가동성 · 안정성 · 균형 · 제어 능력 향상</li>
+        <li style="font-size:.9rem;color:var(--dark);display:flex;gap:.6rem;"><span style="color:var(--green);font-weight:700;">✓</span> 의도와 행동의 조화</li>
+      </ul>
+      <div style="border-top:1px solid var(--border);padding-top:1rem;display:flex;gap:2rem;flex-wrap:wrap;">
+        <span style="font-size:.85rem;color:var(--mid);">· 주제별 12개 ARI Practice</span>
+        <span style="font-size:.85rem;color:var(--mid);">· 모듈 1 총 36개 스크립트 제공</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="reveal" style="margin-bottom:2.5rem;">
+    <div class="prog-box" style="max-width:100%;">
+      <h3 style="font-family:'Noto Serif KR',serif;font-size:1.1rem;font-weight:600;color:var(--dark);margin-bottom:.8rem;">ARI Flow</h3>
+      <p style="font-size:.93rem;color:var(--mid);line-height:1.9;margin-bottom:.8rem;">언제 어디서나 몸과 마음을 회복하고 조율할 수 있는 자기 수련 움직임 시퀀스입니다.</p>
+      <p style="font-size:.93rem;color:var(--mid);line-height:1.9;margin-bottom:1.4rem;">3개의 MOVE가 연결되어 하나의 유기적인 흐름, ARI Flow를 만듭니다.</p>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:.55rem;">
+        <li style="font-size:.9rem;color:var(--dark);display:flex;gap:.6rem;"><span style="color:var(--green);font-weight:700;">✓</span> 움직임의 유동적 흐름</li>
+        <li style="font-size:.9rem;color:var(--dark);display:flex;gap:.6rem;"><span style="color:var(--green);font-weight:700;">✓</span> 자세 전환 및 협응 능력 향상</li>
+        <li style="font-size:.9rem;color:var(--dark);display:flex;gap:.6rem;"><span style="color:var(--green);font-weight:700;">✓</span> 감각 기반의 정교한 조절 능력</li>
+        <li style="font-size:.9rem;color:var(--dark);display:flex;gap:.6rem;"><span style="color:var(--green);font-weight:700;">✓</span> 효율적인 신체 사용과 통합</li>
+        <li style="font-size:.9rem;color:var(--dark);display:flex;gap:.6rem;"><span style="color:var(--green);font-weight:700;">✓</span> 고유한 자기표현의 확장</li>
+        <li style="font-size:.9rem;color:var(--dark);display:flex;gap:.6rem;"><span style="color:var(--green);font-weight:700;">✓</span> 자연스러움과 자발성의 회복</li>
+        <li style="font-size:.9rem;color:var(--dark);display:flex;gap:.6rem;"><span style="color:var(--green);font-weight:700;">✓</span> 움직임을 통한 자유로움</li>
+      </ul>
+      <div style="border-top:1px solid var(--border);padding-top:1rem;display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.4rem;">
+        <span style="font-size:.85rem;color:var(--mid);">· 주제별 3개 ARI Flow</span>
+        <span style="font-size:.85rem;color:var(--mid);">· 모듈 1 총 12개 영상 제공</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="reveal" style="margin-bottom:3rem;">
+    <div class="prog-box" style="max-width:100%;">
+      <h3 style="font-family:'Noto Serif KR',serif;font-size:1.1rem;font-weight:600;color:var(--dark);margin-bottom:1.2rem;">움직임 학습의 핵심 구성</h3>
+      <ul class="checklist-no-bullet" style="list-style:none;display:flex;flex-direction:column;gap:0;">
+        <li style="font-size:.92rem;color:var(--dark);display:flex;gap:.7rem;border-bottom:1px solid var(--border);padding:.55rem 0;"><span style="color:var(--green);font-weight:700;flex-shrink:0;">✔</span> 호흡 · 척추 · 골반 · 어깨를 중심으로 한 기능적 움직임 학습</li>
+        <li style="font-size:.92rem;color:var(--dark);display:flex;gap:.7rem;border-bottom:1px solid var(--border);padding:.55rem 0;"><span style="color:var(--green);font-weight:700;flex-shrink:0;">✔</span> 감각 · 주의 · 조절 기반의 신경계 재조직화 과정</li>
+        <li style="font-size:.92rem;color:var(--dark);display:flex;gap:.7rem;border-bottom:1px solid var(--border);padding:.55rem 0;"><span style="color:var(--green);font-weight:700;flex-shrink:0;">✔</span> 소매틱 원리와 기능 해부학의 통합적 이해</li>
+        <li style="font-size:.92rem;color:var(--dark);display:flex;gap:.7rem;border-bottom:1px solid var(--border);padding:.55rem 0;"><span style="color:var(--green);font-weight:700;flex-shrink:0;">✔</span> 신경과학적 관점에서의 움직임 및 자기 인식 확장</li>
+        <li style="font-size:.92rem;color:var(--dark);display:flex;gap:.7rem;border-bottom:1px solid var(--border);padding:.55rem 0;"><span style="color:var(--green);font-weight:700;flex-shrink:0;">✔</span> 호흡과 움직임의 자연스러운 연결</li>
+        <li style="font-size:.92rem;color:var(--dark);display:flex;gap:.7rem;border-bottom:1px solid var(--border);padding:.55rem 0;"><span style="color:var(--green);font-weight:700;flex-shrink:0;">✔</span> 척추 · 골반 · 어깨의 협응과 통합</li>
+        <li style="font-size:.92rem;color:var(--dark);display:flex;gap:.7rem;border-bottom:1px solid var(--border);padding:.55rem 0;"><span style="color:var(--green);font-weight:700;flex-shrink:0;">✔</span> 감각 기반의 움직임 인식과 조절</li>
+        <li style="font-size:.92rem;color:var(--dark);display:flex;gap:.7rem;border-bottom:1px solid var(--border);padding:.55rem 0;"><span style="color:var(--green);font-weight:700;flex-shrink:0;">✔</span> 주의 전환을 통한 신경계 조율</li>
+        <li style="font-size:.92rem;color:var(--dark);display:flex;gap:.7rem;border-bottom:1px solid var(--border);padding:.55rem 0;"><span style="color:var(--green);font-weight:700;flex-shrink:0;">✔</span> 긴장과 이완의 균형 회복</li>
+        <li style="font-size:.92rem;color:var(--dark);display:flex;gap:.7rem;border-bottom:1px solid var(--border);padding:.55rem 0;"><span style="color:var(--green);font-weight:700;flex-shrink:0;">✔</span> 중력과의 관계 속 효율적인 움직임</li>
+        <li style="font-size:.92rem;color:var(--dark);display:flex;gap:.7rem;padding:.55rem 0;"><span style="color:var(--green);font-weight:700;flex-shrink:0;">✔</span> 움직임 선택지 확장과 자기 인식</li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+
+<!-- ══ CURRICULUM ══ -->
+<section id="curriculum">
+
+  <div class="reveal">
+    <span class="section-tag">Curriculum</span>
+    <h2 class="section-title">교육과정</h2>
+    <p class="section-sub">모듈 1 기본과정과 모듈 2 심화과정으로 구성된 단계별 전문가 양성 과정.</p>
+  </div>
+
+  <div class="module-grid reveal" style="margin-top:1.5rem;">
+    <div class="module-card module-active">
+      <div class="module-badge">Module 1</div>
+      <h3>기본과정</h3>
+      <div class="module-total">총 90시간</div>
+      <div class="module-details">
+
+        <div class="module-row">
+          <span class="mrow-label">수업 시간</span>
+          <span class="mrow-val" style="font-size:.84rem; color:var(--mid); line-height:1.9;">
+            대면 · 토·일 오후 2–7시 (5시간)<br>
+            온라인 · 토 오후 2시 (2시간 30분)
+          </span>
+        </div>
+
+        <div class="module-row" style="align-items:flex-start;">
+          <span class="mrow-label" style="font-weight:700; color:var(--green-d);">세그먼트 1</span>
+          <span class="mrow-val" style="display:flex; flex-direction:column; gap:.7rem; font-size:.84rem; color:var(--mid); line-height:1.9;">
+            <span><strong style="color:var(--dark);">호흡편</strong> · 9/5–6, 9/19–20 &nbsp;|&nbsp; 온라인 10/10</span>
+            <span><strong style="color:var(--dark);">척추편</strong> · 10/24–25, 11/7–8 &nbsp;|&nbsp; 온라인 11/21</span>
+          </span>
+        </div>
+
+        <div class="module-row" style="align-items:flex-start;">
+          <span class="mrow-label" style="font-weight:700; color:var(--green-d);">세그먼트 2</span>
+          <span class="mrow-val" style="display:flex; flex-direction:column; gap:.7rem; font-size:.84rem; color:var(--mid); line-height:1.9;">
+            <span><strong style="color:var(--dark);">골반편</strong> · 1/9–10, 1/23–24 &nbsp;|&nbsp; 온라인 1/30</span>
+            <span><strong style="color:var(--dark);">어깨편</strong> · 2/27–28, 3/13–14 &nbsp;|&nbsp; 온라인 3/27</span>
+          </span>
+        </div>
+
+      </div>
+      <a href="#contact" class="btn-grad" style="margin-top:1.5rem;text-align:center;display:block;">수강 신청하기</a>
+    </div>
+
+    <div class="module-card">
+      <div class="module-badge module-badge-2">등록 및 접수</div>
+      <h3>수강료 안내</h3>
+      <div class="module-total" style="color:var(--light);">정원 16명</div>
+      <div class="module-details">
+        <div class="module-row">
+          <span class="mrow-label">접수비</span>
+          <span class="mrow-val">100,000원 <span style="font-size:.8rem;color:var(--light);">(환불 불가)</span></span>
+        </div>
+        <div class="module-row">
+          <span class="mrow-label">등록금</span>
+          <span class="mrow-val">3,300,000원 <span style="font-size:.8rem;color:var(--light);">(부가세 포함)</span></span>
+        </div>
+        <div class="module-row">
+          <span class="mrow-label">조기 등록</span>
+          <span class="mrow-val">3,000,000원 <span style="font-size:.8rem;color:var(--green-d);font-weight:600;">10% 할인</span> <span style="font-size:.8rem;color:var(--light);">(부가세 포함)</span></span>
+        </div>
+        <div class="module-row">
+          <span class="mrow-label">세그별 등록</span>
+          <span class="mrow-val">1,980,000원 <span style="font-size:.8rem;color:var(--light);">(부가세 포함)</span></span>
+        </div>
+      </div>
+      <a href="apply.html" class="btn-grad" style="margin-top:1.5rem;text-align:center;display:block;">수강 신청하기</a>
+    </div>
+  </div>
+
+  <div class="curriculum-topics reveal">
+    <h3 style="font-family:'Noto Serif KR',serif;font-size:1.3rem;margin-bottom:1.5rem;">아리를 추천합니다</h3>
+    <div class="topic-grid">
+      <div class="topic-item">
+        <div class="topic-title">몸의 소리에 귀 기울이며 나를 더 이해하고 싶은 분</div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-title">움직임을 통해 자기돌봄, 서로돌봄을 실천하고 싶은 분</div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-title">감각, 감정, 생각의 변화를 알아차리고 싶은 분</div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-title">스스로 긴장을 조절하고 회복의 방법을 배우고 싶은 분</div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-title">나답게 움직이는 법을 찾고 싶은 분</div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-title">필라테스, 요가, 무용 강사, 움직임 교육 전문가로서 소매틱스 원리를 배우고 방법론을 확장하고 싶은 분</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ══ FOUNDERS ══ -->
+<section id="founders" style="background:var(--dark);padding:var(--py) var(--px);">
   <div class="founders reveal">
     <div class="founders-header">
       <span class="section-tag">ARI를 만든 사람</span>
@@ -487,231 +691,6 @@
 
     </div>
   </div>
-
-</section>
-
-<!-- ══ PROGRAM ══ -->
-<section id="programs" style="background:#fff;">
-
-  <div class="prog-intro reveal">
-    <span class="section-tag">Program</span>
-    <h2 class="section-title">전문가 과정 소개</h2>
-    <p class="section-sub">한국형 자기돌봄 움직임 전문 교육. 감각과 인지 과정을 효과적으로 유도하는 움직임 시퀀스로 기존 요가·필라테스와 차별화된 소매틱 접근을 경험합니다.</p>
-  </div>
-
-  <div class="prog-top reveal">
-    <div class="prog-box">
-      <h3>🎯 지향과 목표</h3>
-      <ul>
-        <li>몸의 감각·감정·생각의 통합적 인식 능력 개발</li>
-        <li>신경계 기반 움직임 원리 이해와 적용</li>
-        <li>자기돌봄 움직임 지도자 역량 강화</li>
-        <li>개인 맞춤형 ARI Practice 설계 능력</li>
-      </ul>
-    </div>
-    <div class="prog-box">
-      <h3>🔑 핵심 원리</h3>
-      <ul>
-        <li>감각인지 기반 — 느끼며 움직이는 접근</li>
-        <li>신경가소성 활용 — 뇌의 학습 능력 극대화</li>
-        <li>자율신경계 조절 — 안전감과 회복력 증진</li>
-        <li>소매틱 통합 — 몸·마음·움직임의 유기적 연결</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="reveal" style="margin-bottom:2rem;">
-    <p class="prog-section-title">ARI Practice</p>
-    <p style="color:var(--mid);font-size:.92rem;margin-bottom:1.5rem;">주제별 12개의 ARI Practice. 모듈 1 기준 총 24개의 스크립트와 영상을 제공합니다.</p>
-  </div>
-
-  <div class="practice-grid reveal">
-    <div class="practice-card">
-      <div class="practice-num">PRACTICE 01</div>
-      <div class="practice-name">호흡</div>
-      <div class="practice-desc">흉곽·횡격막 인식, 호흡 패턴 재조직으로 신경계 안정화</div>
-    </div>
-    <div class="practice-card">
-      <div class="practice-num">PRACTICE 02</div>
-      <div class="practice-name">척추</div>
-      <div class="practice-desc">척추 분절 인식, 굴곡·신전·회전의 부드러운 탐색</div>
-    </div>
-    <div class="practice-card">
-      <div class="practice-num">PRACTICE 03</div>
-      <div class="practice-name">골반</div>
-      <div class="practice-desc">골반저근 인식, 고관절·요추 연결성 회복</div>
-    </div>
-    <div class="practice-card">
-      <div class="practice-num">PRACTICE 04</div>
-      <div class="practice-name">어깨</div>
-      <div class="practice-desc">견갑골 움직임 패턴, 상지·경추 통합적 이완</div>
-    </div>
-  </div>
-
-  <div class="flow-section reveal">
-    <p class="prog-section-title">ARI Flow</p>
-    <div class="flow-concept">
-      <div class="flow-visual">
-        <div class="flow-steps">
-          <div class="flow-step">
-            <div class="flow-step-icon">🌱</div>
-            <div class="flow-step-label">감지</div>
-          </div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-step">
-            <div class="flow-step-icon">🔄</div>
-            <div class="flow-step-label">탐색</div>
-          </div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-step">
-            <div class="flow-step-icon">✨</div>
-            <div class="flow-step-label">통합</div>
-          </div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-step">
-            <div class="flow-step-icon">🌊</div>
-            <div class="flow-step-label">흐름</div>
-          </div>
-        </div>
-      </div>
-      <div class="flow-text">
-        <h4>감지에서 흐름으로</h4>
-        <p>ARI Flow는 ARI Practice를 연결하는 시퀀스입니다. 개별 움직임 탐구가 자연스러운 흐름으로 통합되어, 몸 전체의 유기적 연결성을 경험합니다.</p>
-      </div>
-    </div>
-    <div class="flow-features">
-      <div class="flow-feat">
-        <div class="flow-feat-icon">🧠</div>
-        <div class="flow-feat-title">신경계 통합</div>
-        <div class="flow-feat-desc">반복적 탐구를 통해 새로운 움직임 패턴이 신경계에 새겨집니다</div>
-      </div>
-      <div class="flow-feat">
-        <div class="flow-feat-icon">🌿</div>
-        <div class="flow-feat-title">자율성 회복</div>
-        <div class="flow-feat-desc">스스로 조절하고 돌보는 능력이 자연스럽게 길러집니다</div>
-      </div>
-      <div class="flow-feat">
-        <div class="flow-feat-icon">💫</div>
-        <div class="flow-feat-title">일상으로의 전환</div>
-        <div class="flow-feat-desc">수업에서 배운 감각이 일상의 움직임으로 이어집니다</div>
-      </div>
-    </div>
-  </div>
-
-</section>
-
-<!-- ══ CURRICULUM ══ -->
-<section id="curriculum">
-
-  <div class="reveal">
-    <span class="section-tag">Curriculum</span>
-    <h2 class="section-title">교육과정</h2>
-    <p class="section-sub">모듈 1 기본과정과 모듈 2 심화과정으로 구성된 단계별 전문가 양성 과정.</p>
-  </div>
-
-  <div class="module-grid reveal" style="margin-top:1.5rem;">
-    <div class="module-card module-active">
-      <div class="module-badge">Module 1</div>
-      <h3>기본과정</h3>
-      <div class="module-total">총 90시간</div>
-      <div class="module-details">
-        <div class="module-row">
-          <span class="mrow-label">기간</span>
-          <span class="mrow-val">총 4개월 (세그먼트 2개 × 2개월)</span>
-        </div>
-        <div class="module-row">
-          <span class="mrow-label">대면 교육</span>
-          <span class="mrow-val">80시간 (각 세그먼트 8일 × 5시간)</span>
-        </div>
-        <div class="module-row">
-          <span class="mrow-label">수업 일정</span>
-          <span class="mrow-val">토·일 오후 2–7시, 격주 진행</span>
-        </div>
-        <div class="module-row" style="align-items:flex-start;">
-          <span class="mrow-label">온라인</span>
-          <span class="mrow-val" style="display:flex;gap:1.5rem;flex-wrap:wrap;">
-            <span>
-              <span style="font-size:.8em;font-weight:600;color:var(--green-d);">세그먼트 1</span>
-              <span style="display:block;font-size:.85em;color:var(--mid);line-height:1.8;margin-top:.2em;">
-                2026. 10. 10 (토) · 2.5시간<br>
-                2026. 11. 21 (토) · 2.5시간
-              </span>
-            </span>
-            <span>
-              <span style="font-size:.8em;font-weight:600;color:var(--green-d);">세그먼트 2</span>
-              <span style="display:block;font-size:.85em;color:var(--mid);line-height:1.8;margin-top:.2em;">
-                2027. 01. 30 (토) · 2.5시간<br>
-                2027. 02. 27 (토) · 2.5시간
-              </span>
-            </span>
-          </span>
-        </div>
-        <div class="module-row">
-          <span class="mrow-label">제공 콘텐츠</span>
-          <span class="mrow-val">ARI Practice 36개 + ARI Flow 12개<br>스크립트 및 영상 전체 제공</span>
-        </div>
-      </div>
-      <a href="#contact" class="btn-grad" style="margin-top:1.5rem;text-align:center;display:block;">수강 신청하기</a>
-    </div>
-
-    <div class="module-card">
-      <div class="module-badge module-badge-2">Module 2</div>
-      <h3>심화과정</h3>
-      <div class="module-total" style="color:var(--light);">모듈 1 수료 후 진행</div>
-      <div class="module-details">
-        <div class="module-row">
-          <span class="mrow-label">대상</span>
-          <span class="mrow-val">모듈 1 수료생</span>
-        </div>
-        <div class="module-row">
-          <span class="mrow-label">내용</span>
-          <span class="mrow-val">심화 ARI Practice 및 Flow<br>지도자 역량 개발</span>
-        </div>
-        <div class="module-row">
-          <span class="mrow-label">상세 일정</span>
-          <span class="mrow-val">모듈 1 수료 후 개별 안내</span>
-        </div>
-      </div>
-      <a href="#contact" class="btn-line" style="margin-top:1.5rem;text-align:center;display:block;">사전 문의하기</a>
-    </div>
-  </div>
-
-  <div class="curriculum-topics reveal">
-    <h3 style="font-family:'Noto Serif KR',serif;font-size:1.3rem;margin-bottom:1.5rem;">학습 내용</h3>
-    <div class="topic-grid">
-      <div class="topic-item">
-        <div class="topic-icon">🧠</div>
-        <div class="topic-title">소매틱 교육 원리</div>
-        <div class="topic-desc">몸-마음 통합 접근과 체험 학습 원리</div>
-      </div>
-      <div class="topic-item">
-        <div class="topic-icon">🦴</div>
-        <div class="topic-title">기능 해부학 기초</div>
-        <div class="topic-desc">움직임 중심의 해부학적 이해</div>
-      </div>
-      <div class="topic-item">
-        <div class="topic-icon">⚡</div>
-        <div class="topic-title">신경과학 기초</div>
-        <div class="topic-desc">신경가소성과 뇌-신체 연결 원리</div>
-      </div>
-      <div class="topic-item">
-        <div class="topic-icon">🫁</div>
-        <div class="topic-title">호흡과 자율신경계</div>
-        <div class="topic-desc">호흡 패턴과 신경계 조절의 관계</div>
-      </div>
-      <div class="topic-item">
-        <div class="topic-icon">🌊</div>
-        <div class="topic-title">움직임 시퀀싱</div>
-        <div class="topic-desc">ARI Practice와 Flow 설계 원칙</div>
-      </div>
-      <div class="topic-item">
-        <div class="topic-icon">💬</div>
-        <div class="topic-title">언어와 안내</div>
-        <div class="topic-desc">감각 유도 언어와 지도자 커뮤니케이션</div>
-      </div>
-    </div>
-  </div>
-
 </section>
 
 <!-- ══ APPLY ══ -->
