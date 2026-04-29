@@ -24,7 +24,7 @@
       --px:       clamp(1.25rem, 6vw, 7rem);
       --py:       clamp(3.5rem, 8vw, 6.5rem);
     }
-    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; }
     body { font-family: 'Noto Sans KR', sans-serif; color: var(--dark); background: var(--bg); line-height: 1.8; overflow-x: hidden; }
     img { max-width: 100%; display: block; }
     .grad-text { background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
@@ -309,10 +309,10 @@
       .ari-word { font-size: 1.1rem !important; }
       .ari-desc { font-size: 1rem !important; }
       /* 본문 p, li 전체 축소 */
-      #programs p, #programs li, #programs span { font-size: 1rem !important; }
-      #about p, #about li { font-size: 1rem !important; }
+      #programs p, #programs li, #programs span { font-size: .88rem !important; }
+      #about p, #about li { font-size: .88rem !important; }
       /* ARI Practice / Flow 제목 */
-      #programs h3 { font-size: 1.3rem !important; }
+      #programs h3 { font-size: 1.2rem !important; }
       /* 교육 내용/구성 2열 → 1열 */
       .edu-grid { grid-template-columns: 1fr !important; }
       .founders-grid { grid-template-columns: 1fr; }
