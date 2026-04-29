@@ -214,39 +214,40 @@
     <span>수강 신청은 사전 상담을 통해 진행됩니다.</span>
   </div>
 
+
   <div class="apply-form">
-    <form id="applyForm">
+    <form id="applyForm" action="https://formspree.io/f/mjgjnjbv" method="POST">
 
       <div class="form-group">
         <label>이름 *</label>
-        <input type="text" placeholder="홍길동" required>
+        <input type="text" name="이름" placeholder="홍길동" required>
       </div>
 
       <div class="form-group">
         <label>연락처 *</label>
-        <input type="tel" placeholder="010-0000-0000" required>
+        <input type="tel" name="연락처" placeholder="010-0000-0000" required>
       </div>
 
       <div class="form-group">
         <label>이메일</label>
-        <input type="email" placeholder="email@example.com">
+        <input type="email" name="이메일" placeholder="email@example.com">
       </div>
 
       <div class="form-group">
         <label>소매틱 경험 유무</label>
         <div class="radio-group">
           <label class="radio-label">
-            <input type="radio" name="somatic" value="있음" id="somatic-yes">
+            <input type="radio" name="소매틱_경험" value="있음" id="somatic-yes">
             <div class="radio-dot"></div>
             경험 있음
           </label>
           <label class="radio-label">
-            <input type="radio" name="somatic" value="없음">
+            <input type="radio" name="소매틱_경험" value="없음">
             <div class="radio-dot"></div>
             경험 없음
           </label>
           <label class="radio-label">
-            <input type="radio" name="somatic" value="잘 모름">
+            <input type="radio" name="소매틱_경험" value="잘 모름">
             <div class="radio-dot"></div>
             잘 모름
           </label>
@@ -255,7 +256,7 @@
 
       <div class="form-group" id="somatic-detail" style="display:none; margin-top:-.4rem;">
         <label>어떤 경험을 하셨나요?</label>
-        <textarea placeholder="경험하신 소매틱 실천이나 수련을 자유롭게 적어주세요. (예: 요가, 명상, 펠든크라이스, 바디워크 등)" style="min-height:100px;"></textarea>
+        <textarea name="소매틱_경험_상세" placeholder="경험하신 소매틱 실천이나 수련을 자유롭게 적어주세요. (예: 요가, 명상, 펠든크라이스, 바디워크 등)" style="min-height:100px;"></textarea>
       </div>
 
       <button type="submit" class="form-submit">신청서 보내기</button>
