@@ -145,7 +145,7 @@
     .hero-eyebrow { display: inline-flex; align-items: center; gap: .5rem; margin-bottom: 1.3rem; font-size: .88rem; font-weight: 600; letter-spacing: .06em; color: var(--green); }
     .hero-text h1 { font-family: 'Noto Serif KR', serif; font-size: clamp(2rem, 4.2vw, 3.4rem); font-weight: 600; line-height: 1.3; margin-bottom: 1.4rem; word-break: keep-all; }
     .hero-text h1 strong { display: block; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .hero-text p { color: var(--mid); font-size: 1.25rem; max-width: 440px; margin-bottom: 2rem; word-break: keep-all; text-align: center; margin-left: 0; }
+    .hero-text p { color: var(--mid); font-size: 1.25rem; max-width: 440px; margin-bottom: 2rem; word-break: keep-all; text-align: left; margin-left: 0; }
     .hero-tags { display: flex; flex-wrap: wrap; gap: .55rem; margin-bottom: 2.2rem; }
     .hero-tag-pill { padding: .45rem 1.1rem; background: rgba(200,190,90,.12); border: 1px solid rgba(200,190,90,.3); border-radius: 16px; font-size: .78rem; font-weight: 600; color: var(--gold-d); letter-spacing: .03em; line-height: 1.5; text-align: center; display: inline-flex; flex-direction: column; align-items: center; }
     .pill-kr { font-size: .7rem; font-weight: 400; color: var(--mid); letter-spacing: .01em; }
@@ -183,8 +183,8 @@
     .slogan-divider { width: 1px; height: 50px; background: rgba(255,255,255,.12); flex-shrink: 0; }
     /* Founders */
     .founders {
-      margin: 5rem calc(-1 * var(--px)) 0;
-      padding: 5rem var(--px) 6rem;
+      margin: 0 calc(-1 * var(--px)) 0;
+      padding: 3rem var(--px) 6rem;
       background: rgba(0,0,0,.28);
       border-top: 3px solid transparent;
       border-image: var(--grad) 1;
@@ -245,8 +245,8 @@
     .module-details { border-top: 1px solid var(--border); padding-top: 1.2rem; }
     .module-row { display: flex; gap: 1rem; padding: .7rem 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
     .module-row:last-child { border-bottom: none; }
-    .mrow-label { font-size: .8rem; font-weight: 600; color: var(--light); letter-spacing: .04em; min-width: 90px; flex-shrink: 0; line-height: 1.6; }
-    .mrow-val { font-size: .88rem; color: var(--dark); line-height: 1.7; }
+    .mrow-label { font-size: 1.1rem; font-weight: 600; color: var(--light); letter-spacing: .04em; min-width: 90px; flex-shrink: 0; line-height: 1.6; }
+    .mrow-val { font-size: 1rem; color: var(--dark); line-height: 1.7; }
     .curriculum-topics { background: #fff; border-radius: 20px; padding: 2.2rem; border: 1px solid var(--border); }
     .topic-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; margin-top: 1rem; }
     .topic-item { background: var(--bg); border-radius: 12px; padding: 1.2rem; border: 1px solid var(--border); }
@@ -296,10 +296,10 @@
       .etym-char { font-size: 2rem; margin-bottom: 0; flex-shrink: 0; }
       .etym-title { margin-bottom: .2rem; }
       .ari-cards { grid-template-columns: 1fr; gap: 0.8rem; }
-      .ari-card { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; gap: .2rem 1.2rem; text-align: left; padding: 1.1rem 1.4rem; align-items: center; }
-      .ari-letter { font-size: 1.8rem; margin-bottom: 0; flex-shrink: 0; grid-row: 1 / 3; align-self: center; }
-      .ari-word { grid-column: 2; grid-row: 1; }
-      .ari-desc { grid-column: 2; grid-row: 2; word-break: keep-all; }
+      .ari-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 1.4rem 1rem; }
+      .ari-letter { font-size: 1.8rem; margin-bottom: .3rem; }
+      .ari-word { grid-column: unset; grid-row: unset; }
+      .ari-desc { grid-column: unset; grid-row: unset; word-break: keep-all; }
 
       /* ── 모바일 글씨 크기 전체 축소 ── */
       .section-title { font-size: clamp(1.4rem, 5vw, 1.8rem) !important; }
@@ -315,6 +315,8 @@
       #edu-section p, #edu-section li { font-size: .88rem !important; }
       #curriculum p, #curriculum li { font-size: .88rem !important; }
       #curriculum h3 { font-size: 1.1rem !important; }
+      #curriculum .mrow-label { font-size: .82rem !important; }
+      #curriculum .mrow-val, #curriculum .mrow-val span { font-size: .82rem !important; }
       #founders .founder-bio { font-size: .88rem !important; }
       #contact p, #contact li, #contact span { font-size: .88rem !important; }
       /* ARI Practice / Flow 제목 */
@@ -548,22 +550,22 @@
       <div class="module-total">총 90시간</div>
       <div class="module-details">
         <div class="module-row">
-          <span class="mrow-label">수업 시간</span>
-          <span class="mrow-val" style="font-size:.84rem; color:var(--mid); line-height:1.9;">
-            대면 · 토·일 오후 2–7시 (5시간)<br>
-            온라인 · 토 오후 2시 (2시간 30분)
+          <span class="mrow-label" style="font-weight:700; color:var(--green-d);">수업 시간</span>
+          <span class="mrow-val" style="font-size:1rem; color:var(--mid); line-height:1.9;">
+            <strong style="color:var(--dark);">대면</strong> · 토·일 오후 2–7시 (5시간)<br>
+            <strong style="color:var(--dark);">온라인</strong> · 토 오후 2시 (2시간 30분)
           </span>
         </div>
         <div class="module-row" style="align-items:flex-start;">
           <span class="mrow-label" style="font-weight:700; color:var(--green-d);">세그먼트 1</span>
-          <span class="mrow-val" style="display:flex; flex-direction:column; gap:.7rem; font-size:.84rem; color:var(--mid); line-height:1.9;">
+          <span class="mrow-val" style="display:flex; flex-direction:column; gap:.7rem; font-size:1rem; color:var(--mid); line-height:1.9;">
             <span><strong style="color:var(--dark);">호흡편</strong> · 9/5–6, 9/19–20 &nbsp;|&nbsp; 온라인 10/10</span>
             <span><strong style="color:var(--dark);">척추편</strong> · 10/24–25, 11/7–8 &nbsp;|&nbsp; 온라인 11/21</span>
           </span>
         </div>
         <div class="module-row" style="align-items:flex-start;">
           <span class="mrow-label" style="font-weight:700; color:var(--green-d);">세그먼트 2</span>
-          <span class="mrow-val" style="display:flex; flex-direction:column; gap:.7rem; font-size:.84rem; color:var(--mid); line-height:1.9;">
+          <span class="mrow-val" style="display:flex; flex-direction:column; gap:.7rem; font-size:1rem; color:var(--mid); line-height:1.9;">
             <span><strong style="color:var(--dark);">골반편</strong> · 1/9–10, 1/23–24 &nbsp;|&nbsp; 온라인 1/30</span>
             <span><strong style="color:var(--dark);">어깨편</strong> · 2/27–28, 3/13–14 &nbsp;|&nbsp; 온라인 3/27</span>
           </span>
@@ -586,7 +588,7 @@
   </div>
 </section>
 <!-- ══ FOUNDERS ══ -->
-<section id="founders" style="background:var(--dark);padding:var(--py) var(--px);">
+<section id="founders" style="background:var(--dark);padding:0 var(--px);">
   <div class="founders reveal">
     <div class="founders-header">
       <span class="section-tag">ARI를 만든 사람</span>
