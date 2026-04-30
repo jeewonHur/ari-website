@@ -196,7 +196,7 @@
     .founder-name { font-family: 'Noto Serif KR', serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin-bottom: .4rem; }
     .founder-role { font-size: .8rem; font-weight: 600; letter-spacing: .08em; color: var(--green); margin-bottom: 1.4rem; line-height: 1.6; }
     .founder-divider { width: 36px; height: 2px; background: var(--grad); margin-bottom: 1.4rem; }
-    .founder-bio { font-size: .92rem; line-height: 1.9; color: rgba(255,255,255,.65); word-break: keep-all; }
+    .founder-bio { font-size: 1.1rem; line-height: 1.9; color: rgba(255,255,255,.65); word-break: keep-all; }
     .founder-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.6rem; }
     .founder-tag { padding: .28rem .8rem; background: rgba(139,168,136,.15); border: 1px solid rgba(139,168,136,.25); border-radius: 50px; font-size: .75rem; font-weight: 500; color: var(--green); }
     /* ══ PROGRAM ══ */
@@ -240,7 +240,7 @@
     .module-active { border-color: var(--green); box-shadow: 0 0 0 1px var(--green), 0 8px 32px rgba(139,168,136,.15); }
     .module-badge { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .12em; background: var(--grad); color: #fff; padding: .3rem .9rem; border-radius: 50px; margin-bottom: .8rem; }
     .module-badge-2 { background: var(--grad-r); }
-    .module-card h3 { font-family: 'Noto Serif KR', serif; font-size: 1.4rem; font-weight: 600; color: var(--dark); margin-bottom: .3rem; }
+    .module-card h3 { font-family: 'Noto Serif KR', serif; font-size: 1.3rem; font-weight: 600; color: var(--dark); margin-bottom: .3rem; }
     .module-total { font-size: .85rem; color: var(--green); font-weight: 600; margin-bottom: 1.2rem; }
     .module-details { border-top: 1px solid var(--border); padding-top: 1.2rem; }
     .module-row { display: flex; gap: 1rem; padding: .7rem 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
@@ -311,6 +311,12 @@
       /* 본문 p, li 전체 축소 */
       #programs p, #programs li, #programs span { font-size: .88rem !important; }
       #about p, #about li { font-size: .88rem !important; }
+      #approach-section p, #approach-section li { font-size: .88rem !important; }
+      #edu-section p, #edu-section li { font-size: .88rem !important; }
+      #curriculum p, #curriculum li { font-size: .88rem !important; }
+      #curriculum h3 { font-size: 1.1rem !important; }
+      #founders .founder-bio { font-size: .88rem !important; }
+      #contact p, #contact li, #contact span { font-size: .88rem !important; }
       /* ARI Practice / Flow 제목 */
       #programs h3 { font-size: 1.2rem !important; }
       /* 교육 내용/구성 2열 → 1열 */
@@ -389,11 +395,6 @@
   <div class="hero-slideshow" id="heroSlideshow">
     <div class="slide active"><img src="hero-slide-1.png" alt="ARI 1"></div>
     <div class="slide"><img src="hero-slide-2.png" alt="ARI 2"></div>
-    <div class="slide"><img src="hero-slide-3.png" alt="ARI 3"></div>
-    <div class="slide"><img src="hero-slide-4.png" alt="ARI 4"></div>
-    <div class="slide"><img src="hero-slide-5.png" alt="ARI 5"></div>
-    <div class="slide"><img src="hero-slide-6.png" alt="ARI 6"></div>
-    <div class="slide"><img src="hero-slide-7.png" alt="ARI 7"></div>
     <div class="slide-dots" id="slideDots"></div>
   </div>
 </section>
@@ -403,15 +404,15 @@
     <span class="section-tag">About ARI</span>
     <img src="ari-logo-white.png" alt="ARI 아리" style="height:160px;width:auto;margin:2rem auto 2.5rem;display:block;">
     <div style="width:100%;text-align:center;display:flex;flex-direction:column;align-items:center;gap:0;margin-bottom:1.5rem;">
-      <p style="font-family:'Noto Serif KR',serif;font-size:1.5rem;color:rgba(255,255,255,.88);line-height:2;word-break:keep-all;">
+      <p style="font-family:'Noto Serif KR',serif;font-size:1.1rem;color:rgba(255,255,255,.88);line-height:2;word-break:keep-all;">
         <span style="background:linear-gradient(135deg,#8BA888,#C8BE5A);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:600;">ㅇ·ㄹ</span> 는 지금, 여기에서 생명의 시원인 우주의 숨과 멈추지 않는 움직임을 뜻합니다.
       </p>
       <div style="width:32px;height:1px;background:linear-gradient(90deg,transparent,rgba(139,168,136,.4),transparent);margin:.9rem auto;"></div>
-      <p style="font-family:'Noto Serif KR',serif;font-size:1.5rem;color:rgba(255,255,255,.6);line-height:2;word-break:keep-all;">
+      <p style="font-family:'Noto Serif KR',serif;font-size:1.1rem;color:rgba(255,255,255,.6);line-height:2;word-break:keep-all;">
         더 이상 보탤 것도 뺄 것도 없는 꾸밈 없는 본래의 몸을 지향합니다.
       </p>
       <div style="width:32px;height:1px;background:linear-gradient(90deg,transparent,rgba(139,168,136,.4),transparent);margin:.9rem auto;"></div>
-      <p style="font-family:'Noto Serif KR',serif;font-size:1.5rem;color:rgba(255,255,255,.6);line-height:2;word-break:keep-all;">
+      <p style="font-family:'Noto Serif KR',serif;font-size:1.1rem;color:rgba(255,255,255,.6);line-height:2;word-break:keep-all;">
         ARI는 몸과 마음 얼(영)을 통합하며 나를 깨닫는 여정입니다.
       </p>
     </div>
@@ -437,23 +438,23 @@
   </div>
 </section>
 <!-- ══ APPROACH ══ -->
-<section style="background:#fff;padding:var(--py) var(--px);">
+<section id="approach-section" style="background:#fff;padding:var(--py) var(--px) 2rem;">
   <div id="approach" class="reveal" style="padding-bottom:var(--py);border-bottom:1px solid var(--border);margin-bottom:2.5rem;text-align:center;">
     <h2 class="section-title" style="text-align:center;">움직임은 곧 삶입니다</h2>
     <div style="text-align:center;display:flex;flex-direction:column;gap:1.4rem;margin-top:1.8rem;">
-      <p style="font-size:1.5rem;color:var(--mid);line-height:2;word-break:keep-all;">ARI는 펠든크라이스 메소드(Feldenkrais Method®)와 제레미크라우스 접근법(Jeremy Krauss Approach)을 바탕으로 설계된 감각인지 기반 움직임 교육입니다.</p>
-      <p style="font-size:1.5rem;color:var(--mid);line-height:2;word-break:keep-all;">감각을 인지하고 근골격계의 협응과 운동조절 능력을 학습하며 신경계의 자기 조절을 돕는 신경생리학적 학습과정입니다.</p>
-      <p style="font-size:1.5rem;color:var(--mid);line-height:2;word-break:keep-all;">또한 몸을 느끼고 표현하는 예술적 경험을 통해 회복과 자기치유의 장을 제공합니다.</p>
+      <p style="font-size:1.1rem;color:var(--mid);line-height:2;word-break:keep-all;">ARI는 펠든크라이스 메소드(Feldenkrais Method®)와 제레미크라우스 접근법(Jeremy Krauss Approach)을 바탕으로 설계된 감각인지 기반 움직임 교육입니다.</p>
+      <p style="font-size:1.1rem;color:var(--mid);line-height:2;word-break:keep-all;">감각을 인지하고 근골격계의 협응과 운동조절 능력을 학습하며 신경계의 자기 조절을 돕는 신경생리학적 학습과정입니다.</p>
+      <p style="font-size:1.1rem;color:var(--mid);line-height:2;word-break:keep-all;">또한 몸을 느끼고 표현하는 예술적 경험을 통해 회복과 자기치유의 장을 제공합니다.</p>
     </div>
   </div>
-  <div class="reveal" style="padding-bottom:var(--py);">
+  <div class="reveal" style="padding-bottom:0;">
     <h2 class="section-title" style="text-align:center;">자기돌봄 서로돌봄</h2>
     <div style="display:flex;flex-direction:column;gap:1.6rem;text-align:center;">
-      <p style="font-size:1.5rem;color:var(--mid);line-height:1.9;word-break:keep-all;">우리는 몸이 아프거나 통증이 느껴질 때 비로소 몸을 들여다봅니다.<br>그리고 병원과 전문가를 찾아 진단을 받고 치료를 시작합니다.<br>외부의 판단과 평가에 의존하는 사이, 우리는 스스로 이해하고 돌볼 수 있는 기회를 점점 놓치게 됩니다.</p>
-      <p style="font-size:1.5rem;color:var(--mid);line-height:1.9;word-break:keep-all;">ARI는 몸을 외부의 대상이 아니라 스스로 돌볼 수 있는 주체로 바라봅니다.<br>본래 우리에게 있는 몸의 자율성과 지혜에 귀 기울입니다.<br>나를 돌보고 회복하는 힘은 누구에게나 열려 있는 보편적인 능력입니다.<br>ARI는 움직임을 통해 그 능력을 다시 깨우고 기르는 교육입니다.</p>
-      <p style="font-size:1.5rem;color:var(--mid);line-height:1.9;word-break:keep-all;">자기돌봄은 나에게 머무르지 않습니다.<br>나의 감각에 귀 기울이고 자신을 존중하는 태도는 자연스럽게 다른 사람에게로 이어집니다.<br>나의 취약성을 받아들일 수 있을 때, 우리는 서로에게 눈길을 건네고 손길을 내밀며 곁을 내줄 수 있습니다.<br>이 과정에서 길러지는 경청과 조절의 힘은 관계 속에서 서로를 지지하고 돌보는 힘으로 확장됩니다.<br>ARI는 자기돌봄이 서로돌봄으로 이어지는 실천입니다.</p>
-      <p style="font-size:1.5rem;color:var(--mid);line-height:1.9;word-break:keep-all;">ARI는 누구에게나 열려 있습니다.<br>복잡한 도구나 환경에 의존하지 않고 언제 어디서나 맨몸으로 이어갈 수 있는 움직임의 방식을 제안합니다.<br>쉽고 단순하지만 반복을 통해 일상 속에서 지속 가능한 자기 수련의 과정입니다.</p>
-      <p style="font-size:1.5rem;color:var(--dark);line-height:1.9;word-break:keep-all;font-weight:700;">ARI는 움직임을 통해 몸과 마음을 회복하고 자기돌봄의 보편적인 가능성을 삶 속에서 실현하는 길입니다.</p>
+      <p style="font-size:1.1rem;color:var(--mid);line-height:1.9;word-break:keep-all;">우리는 몸이 아프거나 통증이 느껴질 때 비로소 몸을 들여다봅니다.<br>그리고 병원과 전문가를 찾아 진단을 받고 치료를 시작합니다.<br>외부의 판단과 평가에 의존하는 사이, 우리는 스스로 이해하고 돌볼 수 있는 기회를 점점 놓치게 됩니다.</p>
+      <p style="font-size:1.1rem;color:var(--mid);line-height:1.9;word-break:keep-all;">ARI는 몸을 외부의 대상이 아니라 스스로 돌볼 수 있는 주체로 바라봅니다.<br>본래 우리에게 있는 몸의 자율성과 지혜에 귀 기울입니다.<br>나를 돌보고 회복하는 힘은 누구에게나 열려 있는 보편적인 능력입니다.<br>ARI는 움직임을 통해 그 능력을 다시 깨우고 기르는 교육입니다.</p>
+      <p style="font-size:1.1rem;color:var(--mid);line-height:1.9;word-break:keep-all;">자기돌봄은 나에게 머무르지 않습니다.<br>나의 감각에 귀 기울이고 자신을 존중하는 태도는 자연스럽게 다른 사람에게로 이어집니다.<br>나의 취약성을 받아들일 수 있을 때, 우리는 서로에게 눈길을 건네고 손길을 내밀며 곁을 내줄 수 있습니다.<br>이 과정에서 길러지는 경청과 조절의 힘은 관계 속에서 서로를 지지하고 돌보는 힘으로 확장됩니다.<br>ARI는 자기돌봄이 서로돌봄으로 이어지는 실천입니다.</p>
+      <p style="font-size:1.1rem;color:var(--mid);line-height:1.9;word-break:keep-all;">ARI는 누구에게나 열려 있습니다.<br>복잡한 도구나 환경에 의존하지 않고 언제 어디서나 맨몸으로 이어갈 수 있는 움직임의 방식을 제안합니다.<br>쉽고 단순하지만 반복을 통해 일상 속에서 지속 가능한 자기 수련의 과정입니다.</p>
+      <p style="font-size:1.1rem;color:var(--dark);line-height:1.9;word-break:keep-all;font-weight:700;">ARI는 움직임을 통해 몸과 마음을 회복하고 자기돌봄의 보편적인 가능성을 삶 속에서 실현하는 길입니다.</p>
     </div>
   </div>
 </section>
@@ -462,70 +463,73 @@
   <div class="prog-intro reveal" style="border-top:1px solid var(--border);padding-top:var(--py);">
     <span class="section-tag">Program</span>
     <h2 class="section-title">전문가 과정 소개</h2>
-    <p style="font-size:1.375rem;color:var(--mid);line-height:2;margin-top:1rem;word-break:normal;overflow-wrap:break-word;">주의(attention), 경청(listening), 관찰(observation), 억제(inhibition), 비판단(non-judgement), 방향(direction), 구별(differentiation) 등 소매틱스의 핵심 원리를 경험 속에서 자연스럽게 체화하며 자기 이해의 가능성을 확장합니다. 이는 실제적인 움직임 학습 과정인 ARI practice와 ARI flow로 구체화됩니다.</p>
+    <p style="font-size:1rem;color:var(--mid);line-height:2;margin-top:1rem;word-break:normal;overflow-wrap:break-word;">주의(attention), 경청(listening), 관찰(observation), 억제(inhibition), 비판단(non-judgement), 방향(direction), 구별(differentiation) 등 소매틱스의 핵심 원리를 경험 속에서 자연스럽게 체화하며 자기 이해의 가능성을 확장합니다. 이는 실제적인 움직임 학습 과정인 ARI practice와 ARI flow로 구체화됩니다.</p>
   </div>
   <div class="reveal" style="margin-bottom:2.5rem;">
     <div class="prog-box" style="max-width:100%;">
-      <h3 style="font-family:'Noto Serif KR',serif;font-size:1.8rem;font-weight:600;color:var(--dark);margin-bottom:.8rem;">ARI Practice</h3>
-      <p style="font-size:1.5rem;color:var(--mid);line-height:1.9;margin-bottom:1.4rem;">교사의 안내에 따라 움직이며, 감각과 주의를 조절하는 경험을 통해 자기 사용 방식을 탐구하는 과정입니다.</p>
+      <h3 style="font-family:'Noto Serif KR',serif;font-size:1.3rem;font-weight:600;color:var(--dark);margin-bottom:.8rem;">ARI Practice</h3>
+      <p style="font-size:1.1rem;color:var(--mid);line-height:1.9;margin-bottom:1.4rem;">교사의 안내에 따라 움직이며, 감각과 주의를 조절하는 경험을 통해 자기 사용 방식을 탐구하는 과정입니다.</p>
       <ul style="list-style:none;display:flex;flex-direction:column;gap:.55rem;margin-bottom:1.6rem;">
-        <li style="font-size:1.5rem;color:var(--dark);display:flex;gap:.6rem;">다양한 자기-사용 방식 탐구 (Different way)</li>
-        <li style="font-size:1.5rem;color:var(--dark);display:flex;gap:.6rem;">주의 조절 및 전환 능력 확장</li>
-        <li style="font-size:1.5rem;color:var(--dark);display:flex;gap:.6rem;">차이를 인지하는 감각의 섬세함</li>
-        <li style="font-size:1.5rem;color:var(--dark);display:flex;gap:.6rem;">신체구조와 기능의 연결</li>
-        <li style="font-size:1.5rem;color:var(--dark);display:flex;gap:.6rem;">민감성 및 신체 인식 향상</li>
-        <li style="font-size:1.5rem;color:var(--dark);display:flex;gap:.6rem;">자세별 중력과의 관계 탐구</li>
-        <li style="font-size:1.5rem;color:var(--dark);display:flex;gap:.6rem;">가동성• 안정성• 균형• 제어 능력 향상</li>
-        <li style="font-size:1.5rem;color:var(--dark);display:flex;gap:.6rem;">의도와 행동의 조화</li>
+        <li style="font-size:1.1rem;color:var(--dark);display:flex;gap:.6rem;">다양한 자기-사용 방식 탐구 (Different way)</li>
+        <li style="font-size:1.1rem;color:var(--dark);display:flex;gap:.6rem;">주의 조절 및 전환 능력 확장</li>
+        <li style="font-size:1.1rem;color:var(--dark);display:flex;gap:.6rem;">차이를 인지하는 감각의 섬세함</li>
+        <li style="font-size:1.1rem;color:var(--dark);display:flex;gap:.6rem;">신체구조와 기능의 연결</li>
+        <li style="font-size:1.1rem;color:var(--dark);display:flex;gap:.6rem;">민감성 및 신체 인식 향상</li>
+        <li style="font-size:1.1rem;color:var(--dark);display:flex;gap:.6rem;">자세별 중력과의 관계 탐구</li>
+        <li style="font-size:1.1rem;color:var(--dark);display:flex;gap:.6rem;">가동성• 안정성• 균형• 제어 능력 향상</li>
+        <li style="font-size:1.1rem;color:var(--dark);display:flex;gap:.6rem;">의도와 행동의 조화</li>
       </ul>
       <div style="border-top:1px solid var(--border);padding-top:1rem;display:flex;gap:2rem;flex-wrap:wrap;">
-        <span style="font-size:1.5rem;color:var(--mid);">·주제별 12개 ARI Practice</span>
-        <span style="font-size:1.5rem;color:var(--mid);">·모듈 1 총 36개 스크립트 제공</span>
+        <span style="font-size:1.1rem;color:var(--mid);">·주제별 12개 ARI Practice</span>
+        <span style="font-size:1.1rem;color:var(--mid);">·모듈 1 총 36개 스크립트 제공</span>
       </div>
     </div>
   </div>
   <div class="reveal" style="margin-bottom:2.5rem;">
     <div class="prog-box" style="max-width:100%;">
-      <h3 style="font-family:'Noto Serif KR',serif;font-size:1.8rem;font-weight:600;color:var(--dark);margin-bottom:.8rem;">ARI Flow</h3>
-      <p style="font-size:1.5rem;color:var(--mid);line-height:1.9;margin-bottom:.8rem;">언제 어디서나 몸과 마음을 회복하고 조율할 수 있는 자기 수련 움직임 시퀀스입니다.</p>
-      <p style="font-size:1.5rem;color:var(--mid);line-height:1.9;margin-bottom:1.4rem;">3개의 MOVE가 연결되어 하나의 유기적인 흐름, ARI Flow를 만듭니다.</p>
+      <h3 style="font-family:'Noto Serif KR',serif;font-size:1.3rem;font-weight:600;color:var(--dark);margin-bottom:.8rem;">ARI Flow</h3>
+      <p style="font-size:1.1rem;color:var(--mid);line-height:1.9;margin-bottom:.8rem;">언제 어디서나 몸과 마음을 회복하고 조율할 수 있는 자기 수련 움직임 시퀀스입니다.</p>
+      <p style="font-size:1.1rem;color:var(--mid);line-height:1.9;margin-bottom:1.4rem;">3개의 MOVE가 연결되어 하나의 유기적인 흐름, ARI Flow를 만듭니다.</p>
       <ul style="list-style:none;display:flex;flex-direction:column;gap:.55rem;">
-        <li style="font-size:1.5rem;color:var(--dark);display:flex;gap:.6rem;">움직임의 유동적 흐름</li>
-        <li style="font-size:1.5rem;color:var(--dark);display:flex;gap:.6rem;">자세 전환 및 협응 능력 향상</li>
-        <li style="font-size:1.5rem;color:var(--dark);display:flex;gap:.6rem;">감각 기반의 정교한 조절 능력</li>
-        <li style="font-size:1.5rem;color:var(--dark);display:flex;gap:.6rem;">효율적인 신체 사용과 통합</li>
-        <li style="font-size:1.5rem;color:var(--dark);display:flex;gap:.6rem;">고유한 자기표현의 확장</li>
-        <li style="font-size:1.5rem;color:var(--dark);display:flex;gap:.6rem;">자연스러움과 자발성의 회복</li>
-        <li style="font-size:1.5rem;color:var(--dark);display:flex;gap:.6rem;">움직임을 통한 자유로움</li>
+        <li style="font-size:1.1rem;color:var(--dark);display:flex;gap:.6rem;">움직임의 유동적 흐름</li>
+        <li style="font-size:1.1rem;color:var(--dark);display:flex;gap:.6rem;">자세 전환 및 협응 능력 향상</li>
+        <li style="font-size:1.1rem;color:var(--dark);display:flex;gap:.6rem;">감각 기반의 정교한 조절 능력</li>
+        <li style="font-size:1.1rem;color:var(--dark);display:flex;gap:.6rem;">효율적인 신체 사용과 통합</li>
+        <li style="font-size:1.1rem;color:var(--dark);display:flex;gap:.6rem;">고유한 자기표현의 확장</li>
+        <li style="font-size:1.1rem;color:var(--dark);display:flex;gap:.6rem;">자연스러움과 자발성의 회복</li>
+        <li style="font-size:1.1rem;color:var(--dark);display:flex;gap:.6rem;">움직임을 통한 자유로움</li>
       </ul>
       <div style="border-top:1px solid var(--border);padding-top:1rem;display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.4rem;">
-        <span style="font-size:1.5rem;color:var(--mid);">·주제별 3개 ARI Flow</span>
-        <span style="font-size:1.5rem;color:var(--mid);">·모듈 1 총 12개 영상 제공</span>
+        <span style="font-size:1.1rem;color:var(--mid);">·주제별 3개 ARI Flow</span>
+        <span style="font-size:1.1rem;color:var(--mid);">·모듈 1 총 12개 영상 제공</span>
       </div>
     </div>
   </div>
-  <div class="reveal edu-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin-bottom:3rem;align-items:start;">
+</section>
+<!-- ══ 교육 내용/구성 ══ -->
+<section id="edu-section" style="background:var(--dark);padding:var(--py) var(--px);">
+  <div class="reveal edu-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start;">
     <div>
-      <p style="font-size:1.5rem;font-weight:700;color:var(--green);margin-bottom:1rem;">교육 내용</p>
+      <p style="font-size:1.1rem;font-weight:700;color:var(--green);margin-bottom:1rem;">교육 내용</p>
       <ul style="list-style:none;display:flex;flex-direction:column;gap:0;">
-        <li style="font-size:1.5rem;color:var(--dark);padding:.55rem 0;display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--green);flex-shrink:0;margin-top:.15em;">•</span>감각 기반의 움직임 인식과 조절</li>
-        <li style="font-size:1.5rem;color:var(--dark);padding:.55rem 0;display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--green);flex-shrink:0;margin-top:.15em;">•</span>주의 조절과 사용</li>
-        <li style="font-size:1.5rem;color:var(--dark);padding:.55rem 0;display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--green);flex-shrink:0;margin-top:.15em;">•</span>공간 방향성과 움직임 패턴</li>
-        <li style="font-size:1.5rem;color:var(--dark);padding:.55rem 0;display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--green);flex-shrink:0;margin-top:.15em;">•</span>자세 전환과 중력의 관계</li>
-        <li style="font-size:1.5rem;color:var(--dark);padding:.55rem 0;display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--green);flex-shrink:0;margin-top:.15em;">•</span>선택적 움직임과 통합</li>
-        <li style="font-size:1.5rem;color:var(--dark);padding:.55rem 0;display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--green);flex-shrink:0;margin-top:.15em;">•</span>움직임 관찰• 설명•실행</li>
-        <li style="font-size:1.5rem;color:var(--dark);padding:.55rem 0;display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--green);flex-shrink:0;margin-top:.15em;">•</span>움직임 제어와 협응</li>
-        <li style="font-size:1.5rem;color:var(--dark);padding:.55rem 0;display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--green);flex-shrink:0;margin-top:.15em;">•</span>균형 감각과 근수축조절 기능의 회복</li>
-        <li style="font-size:1.5rem;color:var(--dark);padding:.55rem 0;display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--green);flex-shrink:0;margin-top:.15em;">•</span>긴장과 이완의 균형 조절</li>
+        <li style="font-size:1.1rem;color:rgba(255,255,255,.8);padding:.55rem 0;display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--green);flex-shrink:0;margin-top:.15em;">•</span>감각 기반의 움직임 인식과 조절</li>
+        <li style="font-size:1.1rem;color:rgba(255,255,255,.8);padding:.55rem 0;display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--green);flex-shrink:0;margin-top:.15em;">•</span>주의 조절과 사용</li>
+        <li style="font-size:1.1rem;color:rgba(255,255,255,.8);padding:.55rem 0;display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--green);flex-shrink:0;margin-top:.15em;">•</span>공간 방향성과 움직임 패턴</li>
+        <li style="font-size:1.1rem;color:rgba(255,255,255,.8);padding:.55rem 0;display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--green);flex-shrink:0;margin-top:.15em;">•</span>자세 전환과 중력의 관계</li>
+        <li style="font-size:1.1rem;color:rgba(255,255,255,.8);padding:.55rem 0;display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--green);flex-shrink:0;margin-top:.15em;">•</span>선택적 움직임과 통합</li>
+        <li style="font-size:1.1rem;color:rgba(255,255,255,.8);padding:.55rem 0;display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--green);flex-shrink:0;margin-top:.15em;">•</span>움직임 관찰• 설명•실행</li>
+        <li style="font-size:1.1rem;color:rgba(255,255,255,.8);padding:.55rem 0;display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--green);flex-shrink:0;margin-top:.15em;">•</span>움직임 제어와 협응</li>
+        <li style="font-size:1.1rem;color:rgba(255,255,255,.8);padding:.55rem 0;display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--green);flex-shrink:0;margin-top:.15em;">•</span>균형 감각과 근수축조절 기능의 회복</li>
+        <li style="font-size:1.1rem;color:rgba(255,255,255,.8);padding:.55rem 0;display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--green);flex-shrink:0;margin-top:.15em;">•</span>긴장과 이완의 균형 조절</li>
       </ul>
     </div>
     <div>
-      <p style="font-size:1.5rem;font-weight:700;color:var(--green);margin-bottom:1rem;">교육 구성</p>
+      <p style="font-size:1.1rem;font-weight:700;color:var(--green);margin-bottom:1rem;">교육 구성</p>
       <ul style="list-style:none;display:flex;flex-direction:column;gap:0;">
-        <li style="font-size:1.5rem;color:var(--dark);padding:.55rem 0;display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--green);flex-shrink:0;margin-top:.15em;">•</span>호흡편• 척추편 • 골반편• 어깨편으로 구성된 주요 부위의 기능적 움직임 학습</li>
-        <li style="font-size:1.5rem;color:var(--dark);padding:.55rem 0;display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--green);flex-shrink:0;margin-top:.15em;">•</span>소매틱 원리와 기능 해부학의 통합적 이해</li>
-        <li style="font-size:1.5rem;color:var(--dark);padding:.55rem 0;display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--green);flex-shrink:0;margin-top:.15em;">•</span>셀프 핸즈온 기법</li>
-        <li style="font-size:1.5rem;color:var(--dark);padding:.55rem 0;display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--green);flex-shrink:0;margin-top:.15em;">•</span>펠든크라이스 메소드와 제레미크라우스 접근법을 기반으로 K-소마틱스를 지향하며 독창적인 ARI practice와 ARI flow 개발</li>
+        <li style="font-size:1.1rem;color:rgba(255,255,255,.8);padding:.55rem 0;display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--green);flex-shrink:0;margin-top:.15em;">•</span>호흡편• 척추편 • 골반편• 어깨편으로 구성된 주요 부위의 기능적 움직임 학습</li>
+        <li style="font-size:1.1rem;color:rgba(255,255,255,.8);padding:.55rem 0;display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--green);flex-shrink:0;margin-top:.15em;">•</span>소매틱 원리와 기능 해부학의 통합적 이해</li>
+        <li style="font-size:1.1rem;color:rgba(255,255,255,.8);padding:.55rem 0;display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--green);flex-shrink:0;margin-top:.15em;">•</span>셀프 핸즈온 기법</li>
+        <li style="font-size:1.1rem;color:rgba(255,255,255,.8);padding:.55rem 0;display:flex;gap:.6rem;align-items:flex-start;"><span style="color:var(--green);flex-shrink:0;margin-top:.15em;">•</span>펠든크라이스 메소드와 제레미크라우스 접근법을 기반으로 K-소마틱스를 지향하며 독창적인 ARI practice와 ARI flow 개발</li>
       </ul>
     </div>
   </div>
@@ -570,14 +574,14 @@
   </div>
 
   <div class="curriculum-topics reveal">
-    <h3 style="font-family:'Noto Serif KR',serif;font-size:1.3rem;margin-bottom:1.5rem;">아리를 추천합니다</h3>
+    <h3 style="font-family:'Noto Serif KR',serif;font-size:1.1rem;margin-bottom:1.5rem;">아리를 추천합니다</h3>
     <ul style="list-style:none;display:flex;flex-direction:column;">
-      <li style="display:flex;align-items:baseline;gap:.75rem;padding:1rem 0;border-bottom:1px solid var(--border);font-size:.97rem;color:var(--dark);line-height:1.7;"><span style="color:var(--green);font-size:.8rem;flex-shrink:0;">✦</span>몸의 소리에 귀 기울이며 나를 더 이해하고 싶은 분</li>
-      <li style="display:flex;align-items:baseline;gap:.75rem;padding:1rem 0;border-bottom:1px solid var(--border);font-size:.97rem;color:var(--dark);line-height:1.7;"><span style="color:var(--green);font-size:.8rem;flex-shrink:0;">✦</span>움직임을 통해 자기돌봄, 서로돌봄을 실천하고 싶은 분</li>
-      <li style="display:flex;align-items:baseline;gap:.75rem;padding:1rem 0;border-bottom:1px solid var(--border);font-size:.97rem;color:var(--dark);line-height:1.7;"><span style="color:var(--green);font-size:.8rem;flex-shrink:0;">✦</span>감각, 감정, 생각의 변화를 알아차리고 싶은 분</li>
-      <li style="display:flex;align-items:baseline;gap:.75rem;padding:1rem 0;border-bottom:1px solid var(--border);font-size:.97rem;color:var(--dark);line-height:1.7;"><span style="color:var(--green);font-size:.8rem;flex-shrink:0;">✦</span>스스로 긴장을 조절하고 회복의 방법을 배우고 싶은 분</li>
-      <li style="display:flex;align-items:baseline;gap:.75rem;padding:1rem 0;border-bottom:1px solid var(--border);font-size:.97rem;color:var(--dark);line-height:1.7;"><span style="color:var(--green);font-size:.8rem;flex-shrink:0;">✦</span>나답게 움직이는 법을 찾고 싶은 분</li>
-      <li style="display:flex;align-items:baseline;gap:.75rem;padding:1rem 0;font-size:.97rem;color:var(--dark);line-height:1.7;"><span style="color:var(--green);font-size:.8rem;flex-shrink:0;">✦</span>필라테스, 요가, 무용 강사, 움직임 교육 전문가로서 소매틱스 원리를 배우고 방법론을 확장하고 싶은 분</li>
+      <li style="display:flex;align-items:baseline;gap:.75rem;padding:1rem 0;border-bottom:1px solid var(--border);font-size:1.1rem;color:var(--dark);line-height:1.7;"><span style="color:var(--green);font-size:.8rem;flex-shrink:0;">✦</span>몸의 소리에 귀 기울이며 나를 더 이해하고 싶은 분</li>
+      <li style="display:flex;align-items:baseline;gap:.75rem;padding:1rem 0;border-bottom:1px solid var(--border);font-size:1.1rem;color:var(--dark);line-height:1.7;"><span style="color:var(--green);font-size:.8rem;flex-shrink:0;">✦</span>움직임을 통해 자기돌봄, 서로돌봄을 실천하고 싶은 분</li>
+      <li style="display:flex;align-items:baseline;gap:.75rem;padding:1rem 0;border-bottom:1px solid var(--border);font-size:1.1rem;color:var(--dark);line-height:1.7;"><span style="color:var(--green);font-size:.8rem;flex-shrink:0;">✦</span>감각, 감정, 생각의 변화를 알아차리고 싶은 분</li>
+      <li style="display:flex;align-items:baseline;gap:.75rem;padding:1rem 0;border-bottom:1px solid var(--border);font-size:1.1rem;color:var(--dark);line-height:1.7;"><span style="color:var(--green);font-size:.8rem;flex-shrink:0;">✦</span>스스로 긴장을 조절하고 회복의 방법을 배우고 싶은 분</li>
+      <li style="display:flex;align-items:baseline;gap:.75rem;padding:1rem 0;border-bottom:1px solid var(--border);font-size:1.1rem;color:var(--dark);line-height:1.7;"><span style="color:var(--green);font-size:.8rem;flex-shrink:0;">✦</span>나답게 움직이는 법을 찾고 싶은 분</li>
+      <li style="display:flex;align-items:baseline;gap:.75rem;padding:1rem 0;font-size:1.1rem;color:var(--dark);line-height:1.7;"><span style="color:var(--green);font-size:.8rem;flex-shrink:0;">✦</span>필라테스, 요가, 무용 강사, 움직임 교육 전문가로서 소매틱스 원리를 배우고 방법론을 확장하고 싶은 분</li>
     </ul>
   </div>
 </section>
